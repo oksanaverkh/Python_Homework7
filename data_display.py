@@ -10,5 +10,7 @@ def find_contact_in_phonebook(last_name):
           
 def show_phonebook():
     log.log_input_data('Phonebook preview requested by user')
-    surname = input('Enter a surname: ')
-    dp.find_contact_in_phonebook(surname)
+    with open('phonebook.txt', 'r') as data:
+        data = data.readlines()
+    log.log_input_data('Phonebook unloaded')
+    return data

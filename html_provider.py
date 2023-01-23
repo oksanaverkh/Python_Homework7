@@ -1,16 +1,16 @@
-from user_interface import temperature_view
-from user_interface import wind_speed_view
-from user_interface import pressure_view
+from data_display import show_phonebook
 
-def create(device=1):
-    style = 'style="font-size:22px;"'
-    html = '<html>\n <head></head>\n <body>\n'
-    html +='    <p {}>Temperature: {} c</p>\n'\
-        .format(style, temperature_view(device))
-    html +='    <p {}>Wind_speed: {} m/s</p>\n'\
-        .format(style, wind_speed_view(device))
-    html +='    <p {}>Pressure: {} mmHg</p>\n'\
-        .format(style, pressure_view(device))
+def create():
+    style1 = 'style="font-size:42px;"'
+    style2 = 'style="font-size:22px;"'
+
+    html = '<html>\n <head>Phonebook</head>\n <body>\n'\
+            .format(style1, 'Phonebook')
+    for i in range(len(show_phonebook())):
+        data = (show_phonebook())[i]
+        html +='    <p {}>{}</p>\n'\
+            .format(style2, data+'\n')
+        html +='\n'
     html += '   </body>\n</html'
 
     with open('index.html', 'w') as page:

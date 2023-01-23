@@ -1,6 +1,7 @@
 import logger as log    
 import data_provider as dp
 import data_display as dd
+import check_input as ch
 
 def add_contact():
     log.log_input_data('Contact addition requested by user')
@@ -15,7 +16,7 @@ def add_contact():
 def import_contact():
     log.log_input_data('Contact import from file requested by user')
     print('Enter a path to file: ')
-    name_file = input()
+    name_file = ch.check_filepath()
     dp.import_contact_from_file(name_file)
 
 def show_contact():

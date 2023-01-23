@@ -19,3 +19,10 @@ def check_input_3():
         print('Wrong value, try again')
         number = input()
     return number
+
+def check_filepath():
+    path = input()
+    while not '.' in path:
+        print('Wrong value, try again')
+        path = input()
+    return path
