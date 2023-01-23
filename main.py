@@ -1,4 +1,4 @@
-from user_interface import add_contact as add
+import user_interface as ui
 import controller as c
 import logger as log
 
@@ -11,10 +11,9 @@ elif user_input =='2':
     print('Choose an operation: manual addition - 1, import from a file - 2')
     next_input = c.check_input_2()
     if next_input =='1':
-        add()
+        ui.add_contact()
     else:
-        pass
-#     c.button_click()
+        ui.import_contact()
 elif user_input =='3':
     print('Choose a view format: HTML - 1, CSV.file - 2')
     next_input = c.check_input_2()
