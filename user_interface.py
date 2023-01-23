@@ -33,3 +33,7 @@ def import_contact():
     print('Enter a path to file: ')
     name_file = input()
     dp.import_contact_from_file(name_file)
+
+def show_contact():
+    surname = input('Enter a surname: ')
+    print(dp.find_contact_in_phonebook(surname))
