@@ -35,5 +35,6 @@ def import_contact():
     dp.import_contact_from_file(name_file)
 
 def show_contact():
+    log.log_input_data('Info about contact requested by user')
     surname = input('Enter a surname: ')
-    print(dp.find_contact_in_phonebook(surname))
+    dp.find_contact_in_phonebook(surname)
