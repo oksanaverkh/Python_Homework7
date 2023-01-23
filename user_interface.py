@@ -1,22 +1,6 @@
 import logger as log    
 import data_provider as dp
-
-# def get_data():
-#     a = input('Enter a number: ')
-#     op = input('Enter an operator: ')
-#     b = input('Enter a number: ')
-#     log.logger(a+op+b)
-
-#     if 'j' in a:
-#         a = complex(a)
-#     if 'j' in b:
-#         b = complex(b)
-#     else:
-#         a = int(a)
-#         b = int(b)
-#     # log.input_logger(a, b, op)
-
-#     return a, b, op
+import data_display as dd
 
 def add_contact():
     log.log_input_data('Contact addition requested by user')
@@ -37,4 +21,5 @@ def import_contact():
 def show_contact():
     log.log_input_data('Info about contact requested by user')
     surname = input('Enter a surname: ')
-    dp.find_contact_in_phonebook(surname)
+    dd.find_contact_in_phonebook(surname)
+

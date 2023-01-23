@@ -12,3 +12,10 @@ def check_input_2():
         print('Wrong value, try again')
         number = input()
     return number
+
+def check_input_3():
+    number = input()
+    while not number in '123':
+        print('Wrong value, try again')
+        number = input()
+    return number

@@ -1,5 +1,5 @@
 import user_interface as ui
-import controller as c
+import check_input as c
 import logger as log
 
 print('Choose an operation: ')
@@ -15,11 +15,13 @@ elif user_input =='2':
     else:
         ui.import_contact()
 elif user_input =='3':
-    print('Choose a view format: HTML - 1, CSV.file - 2')
-    next_input = c.check_input_2()
+    print('Choose a view format: HTML - 1, CSV.file - 2, terminal - 3')
+    next_input = c.check_input_3()
     if next_input =='1':
         pass
-    else:
+    elif next_input =='2':
         pass
+    else:
+        
 elif user_input=='4':
     pass
