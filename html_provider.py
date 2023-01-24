@@ -2,6 +2,7 @@ from data_display import show_phonebook
 import logger as log
 
 def create_html():
+    log.log_input_data('Phonebook preview in html-format reguested by user')
     style1 = 'style="font-size:42px;"'
     style2 = 'style="font-size:22px;"'
     style3 = 'style="font-size:28px;"'

@@ -18,7 +18,7 @@ if user_input =='1':
 elif user_input =='2':
     print('Choose an operation: manual addition - 1, import from a file - 2')
     next_input = c.check_input_2()
-    
+
     if next_input =='1':
         ui.add_contact()
     else:
@@ -36,4 +36,4 @@ elif user_input =='3':
         print(*(dd.show_phonebook()))
 
 elif user_input=='4':
-    pass
+    log.log_output_data()
