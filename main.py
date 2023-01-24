@@ -35,5 +35,10 @@ elif user_input =='3':
     else:
         print(*(dd.show_phonebook()))
 
-elif user_input=='4':
-    log.log_output_data()
+else:
+    print('Choose a view format: CSV.file - 1, terminal - 2')
+    next_input = c.check_input_2()
+    if next_input =='1':
+        log.log_output_data_csv()
+    else:
+        log.log_output_data_term()
