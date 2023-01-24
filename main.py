@@ -3,6 +3,7 @@ import check_input as c
 import logger as log
 import data_display as dd
 import html_provider as hp
+import csv_provider as cp
 
 print('Choose an operation: ')
 print('finding a contact - 1', 'addition of a new contact - 2', 'export of a phonebook - 3', 'logger journal unload - 4', sep='\n')
@@ -22,7 +23,7 @@ elif user_input =='3':
     if next_input =='1':
         hp.create_html()
     elif next_input =='2':
-        pass
+        cp.create_csv()
     else:
         print(*(dd.show_phonebook()))
 elif user_input=='4':
