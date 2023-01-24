@@ -26,3 +26,10 @@ def check_filepath():
         print('Wrong value, try again')
         path = input()
     return path
+
+def check_text():
+    text = input()
+    while not text.isalpha():
+        print('Wrong input, try again')
+        text = input()
+    return text

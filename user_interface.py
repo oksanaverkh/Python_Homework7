@@ -21,6 +21,7 @@ def import_contact():
 
 def show_contact():
     log.log_input_data('Info about contact requested by user')
-    surname = input('Enter a surname: ')
+    print('Enter a surname: ')
+    surname = ch.check_text()
     dd.find_contact_in_phonebook(surname)
 

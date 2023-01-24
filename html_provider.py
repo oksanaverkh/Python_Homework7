@@ -1,4 +1,5 @@
 from data_display import show_phonebook
+import logger as log
 
 def create_html():
     style1 = 'style="font-size:42px;"'
@@ -7,12 +8,12 @@ def create_html():
 
     html = '<html>\n <head>    <p {}>{}</p></head>\n <body>\n'\
             .format(style1, 'Phonebook')
-    count=1
-    html +='<html>\n <head>    <p {}>{}</p></head>\n <body>\n'\
-            .format(style3, f'Contact {count}')
+    count=0
+    # html +='<html>\n <head>    <p {}>{}</p></head>\n <body>\n'\
+    #         .format(style3, f'Contact {count}')
     for i in range(len(show_phonebook())):
         data = (show_phonebook())[i]
-        if not (i+1)%4:
+        if 'Surname:' in data:
             count+=1
             html +='<html>\n <head>    <p {}>{}</p></head>\n <body>\n'\
             .format(style3, f'Contact {count}')
@@ -22,5 +23,5 @@ def create_html():
 
     with open('index.html', 'w') as page:
         page.write(html)
-    
+    log.log_input_data('File .html unloaded')
     return html
