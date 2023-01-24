@@ -7,13 +7,15 @@ def log_input_data(text):
                         .format(time, str(text)))
 
 def log_output_data_term():
+    log_input_data('Logging journal preview requested by user')
     with open('log.txt', 'r') as data:
         print(*data.readlines())
+    log_input_data('Logging journal printed in terminal')
 
 def log_output_data_csv():
+    log_input_data('Logging journal unload in .csv file requested by user')
     with open('log.csv', 'w') as file:
         with open('log.txt', 'r') as data:
             data = data.readlines()
-            # for i in range(len(data)):
-            #     data = data[i]
             file.writelines(data)
+    log_input_data('Logging journal unload in .csv file')

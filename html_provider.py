@@ -10,8 +10,6 @@ def create_html():
     html = '<html>\n <head>    <p {}>{}</p></head>\n <body>\n'\
             .format(style1, 'Phonebook')
     count=0
-    # html +='<html>\n <head>    <p {}>{}</p></head>\n <body>\n'\
-    #         .format(style3, f'Contact {count}')
     for i in range(len(show_phonebook())):
         data = (show_phonebook())[i]
         if 'Surname:' in data:
