@@ -5,7 +5,7 @@ import data_display as dd
 import html_provider as hp
 
 print('Choose an operation: ')
-print('finding a contact - 1', 'addition of a new contact - 2', 'export of a phonebook - 3', 'logger journal looking - 4', sep='\n')
+print('finding a contact - 1', 'addition of a new contact - 2', 'export of a phonebook - 3', 'logger journal unload - 4', sep='\n')
 user_input = c.check_input_1()
 if user_input =='1':
     ui.show_contact()
